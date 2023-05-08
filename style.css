@@ -1,0 +1,178 @@
+body
+{
+    height:100%;
+    background: #686663 fixed;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+@keyframes splash_logo
+{
+    0% {height: 100%; top: -100.5%}
+    25% {height: 10%; top: -62.5%}
+    50% {height: 90%; top: -92.5%}
+    50% {height: 40%; top: -75%}
+    100% {height: 100%; top: -100.5%}
+}
+@keyframes splash_logo1
+{
+    0% {height: 100%; top: -201%}
+    25% {height: 10%; top: -125%}
+    50% {height: 90%; top: -185%}
+    50% {height: 40%; top: -150%}
+    100% {height: 100%; top: -201%}
+}
+@keyframes splash_logo2
+{
+    0% {height: 100%; top: -301.5%}
+    25% {height: 10%; top: -187.5%}
+    50% {height: 90%; top: -277.5%}
+    50% {height: 40%; top: -225%}
+    100% {height: 100%; top: -301.5%}
+}
+
+@font-face
+{
+    font-family: big;
+    font-weight: 100;
+    src: url(./font-big.otf);
+}
+h1
+{
+    font-size: 100px;
+    line-height: 0px;
+    font-family: big;
+    color: #e87d0d;
+    text-shadow: #e87d0d90 0px 0px 20px;
+}
+h2
+{
+    font-size: 35px;
+    line-height:35px;
+    font-family: big;
+    color: #1b3d5f;
+    text-shadow: #26578730 0px 0px 20px;
+}
+@font-face
+{
+    font-family: small;
+    font-weight: 100;
+    src: url(./font-small.ttf);
+}
+h3
+{
+    font-size: 30px;
+    line-height:30px;
+    font-family: small;
+    color: #1a2835;
+}
+h5
+{
+    font-size: 15px;
+    line-height:15px;
+    font-family: small;
+    color: #1f1f1f;
+}
+
+.logo-button
+{
+    width: 15vw;
+    height: 15vw;
+    background-image: url(./logo_1.png);
+    background-size: cover;
+    background-color: #00000000;
+    border: none;
+    transition: all 0.15s;
+}
+.logo-button:hover{ filter: drop-shadow(#e87d0d 0px 0px 10px); }
+.logo-button:focus{ filter: drop-shadow(#e87d0d 0px 0px 30px); border: solid #e87d0d 10x; }
+.tuto-select
+{
+    position: relative;
+    margin: 5px;
+    background-color: #265787;
+    border: #00000000;
+    border-radius: 5px;
+    transition: all 0.15s;
+    border: solid #e87d0d 0px;
+}
+.tuto-select:hover{filter: drop-shadow(#e87d0d 0px 0px 10px); border: solid #e87d0d 2px;}
+
+.illu{
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.illu.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+#invertillu
+{
+    transform: translateX(150px) scaleX(-1);
+}
+#invertillu.illu.active
+{
+    transform: translateX(0px) scaleX(-1);
+}
+
+.splat-img
+{
+    position: relative;
+    scale: 0;
+    transition: 0.4s all ease;
+    filter: blur(0px);
+    margin-top: 50px;
+}
+.splat-img.active
+{
+    scale: 2;
+}
+.splat-img.blured#orange
+{
+    filter: blur(0px) drop-shadow(#e87d0d 0px 0px 20px) brightness(1.2);
+}
+.splat-img.blured#blue
+{
+    filter: blur(0px) drop-shadow(#265787 0px 0px 20px) brightness(2);
+}
+
+#start-button
+{
+    top: -300px;
+    position: absolute;
+    left: calc(50vw - 300px);
+    font-family: big;
+    border-radius: 1000px;
+    border: #00000000;
+    background-color: #e87d0d;
+    box-shadow: inset #00000050 -10px -10px 30px, inset #ffffff50 10px 10px 30px, #00000050 0px 0px 50px;
+    color: #265787;
+    font-size: 75px;
+    width: 300px;
+    height: 300px;
+    transition: all 0.1s;
+}
+#start-button:hover
+{
+    box-shadow: inset #00000000 -10px -10px 0px, inset #ffffff00 10px 10px 0px, #e87d0d 0px 0px 50px;
+    text-shadow: #49a4ff 0px 0px 20px;
+    color: #49a4ff;
+}
+
+button
+{
+    font-family: small;
+    font-size: 30px;
+    line-height: 0px;
+    height: 40px;
+    width: 130px;
+    margin-top: 50px;
+    background-color: #e87d0d;
+    border-radius: 10px;
+    border-color: #00000000;
+    transition: all 1s, background 0.1s;
+}
+button:hover{ background-color: #265787; }
+button:focus{ background-color: #49a4ff; }
